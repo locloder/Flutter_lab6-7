@@ -8,8 +8,17 @@ class HomeViewModel extends ChangeNotifier {
 
   HomeViewModel({required UserProfileRepository repository})
       : _repository = repository {
-    _profiles = _repository.getAllProfiles();
+    loadProfiles();
   }
 
   List<UserProfile> get profiles => _profiles;
+
+  void loadProfiles() {
+    _profiles = _repository.getAllProfiles();
+    notifyListeners();
+  }
+
+  void refreshProfiles() {
+    loadProfiles();
+  }
 }
