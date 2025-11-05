@@ -10,10 +10,10 @@ class DetailPage extends StatefulWidget {
   final bool isDuplicating; 
 
   const DetailPage({
-    Key? key, 
+    super.key, 
     required this.profileId, 
     this.isDuplicating = false
-  }) : super(key: key);
+  });
 
   @override
   State<DetailPage> createState() => _DetailPageState();

@@ -5,7 +5,7 @@ import 'package:my_personal_app/viewmodels/home_viewmodel.dart';
 import 'package:my_personal_app/models/user_profile.dart'; 
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,8 +55,8 @@ class HomePage extends StatelessWidget {
         onPressed: () {
           context.go('/detail/new');
         },
-        child: const Icon(Icons.add),
         tooltip: 'Створити нове резюме',
+        child: const Icon(Icons.add),
       ),
     );
   }

@@ -6,10 +6,10 @@ class ProfileCard extends StatelessWidget {
   final String title;
 
   const ProfileCard({
-    Key? key,
+    super.key,
     required this.userProfile,
     required this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
